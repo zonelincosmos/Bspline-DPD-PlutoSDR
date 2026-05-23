@@ -91,6 +91,7 @@ Key parameters at the top of `Bspline_DPD_PlutoSDR.m`:
 |------|-------------|
 | `Bspline_DPD_PlutoSDR.m` | Main script (B-spline DPD loop + `captureAndSync` + Farrow resampler + WLS) |
 | `Bspline_DPD_PlutoSDR_2.m` | Variant: only the `G_max` gain cap is active (drive cap + extrapolation disabled), endpoint LUT entries pasted to a stable interior neighbor, per-iteration LUT(dB) overlay plotted |
+| `Bspline_DPD_PlutoSDR_2_memory.m` | Memory extension of `_2`: predistorter is a sum of 5 memory taps (3 self + 2 cross), each with its own complex B-spline LUT; one joint WLS solve per ILC iteration |
 | `RefSignal.mat` | Reference waveform |
 | `images/` | Result figures and the convergence animation |
 | `LICENSE` | MIT license |
